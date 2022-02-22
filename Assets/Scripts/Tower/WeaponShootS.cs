@@ -159,13 +159,11 @@ namespace Assets.Scripts.Tower
 
             var bullet = BulletPoolManager.Instance.GetObject("Bullet");
             var t = 0f;
-            var speed = 6f;
+            var speed = 8f;
             var target = hit.point;
             do
             {
                 bullet.SetActive(true);
-
-
 
                 t += Time.deltaTime * speed;
                 var _start = muzzle.transform.position;
