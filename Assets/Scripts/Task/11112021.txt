@@ -1,0 +1,18 @@
+﻿---  Yeni Notlar
++++  Tamamlanan Notlar
+???  Üzerinde Konusulması gereken konu 
+
+---  Yeni Çalışılacak Notlarımız var.
++++  Player Control Scriptlerinin Hazırlaması 
+???  Object Pool Çalışırlılığını Test Edelim. ( Bunun nerede kullanılacağını anlamadım. )
+
+---------------------------------------------------------------------------------------------
+----------------------------------   SORULAR  -----------------------------------------------
+---------------------------------------------------------------------------------------------
+*** Üzerine konusulacak konular 
+
+ 
+---------------------------------------------------------------------------------------------
+-----------------------------   Yapılacak İşler ---------------------------------------------
+---------------------------------------------------------------------------------------------
+--- Inventory Mantığı olmayacak.  Elimizde Collected Items Listesi var buna göre kuleye geri aktarım yapılırken gereken hesaplamayı yaparız.
