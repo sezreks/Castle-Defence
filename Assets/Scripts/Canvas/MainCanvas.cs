@@ -68,7 +68,7 @@ namespace Assets.Scripts.Canvas
 
         void FixedUpdate()
         {
-            diamondText.text = PlayerData.Instance.Diamond.ToString();
+            //diamondText.text = PlayerData.Instance.Diamond.ToString();
 
             if (remainingTime > 0 && started && !TimerBool)
             {

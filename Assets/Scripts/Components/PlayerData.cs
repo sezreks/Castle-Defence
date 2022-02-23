@@ -356,7 +356,7 @@ public class PlayerData : Singleton<PlayerData>
 
         if (PlayerPrefs.GetInt("HasPlayed") == 0)
         {
-            ResetStore();
+            //ResetStore();
             ResetUnlockables();
             PlayerPrefs.SetInt("HasPlayed", 1);
         }
