@@ -24,54 +24,13 @@ namespace Assets.Scripts.Tower
                 {
                     CanFire = false;
 
-                    #region Old Tower Shoot
-                    //if (hit.transform.TryGetComponent(out Block item))
-                    //{
-
-                    //    //item.GetDamage();
-                    //    //FixedJobs();
-
-                    //    //placeholderInt = 1;
-
-                    //}
-                    //else if (hit.transform.name == "TowerTop")
-                    //{
-                    //    //FixedJobs(); 
-                    //    //var placeholder = hit.transform.parent.GetChild(hit.transform.GetSiblingIndex() + placeholderInt);
-                    //    //if (placeholder.childCount != 0)
-                    //    //{
-                    //    //    var firstblock = placeholder.GetChild(placeholder.childCount - 1).GetComponent<Block>();
-                    //    //    firstblock.GetDamage();
-                    //    //}
-                    //    //else { placeholderInt++; }
-                    //}
-                    //else
-                    //{
-                    //    placeholderInt = 1;
-                    //}
-                    #endregion
-
-
-
                     if (hit.transform.TryGetComponent(out Cannonball ball))
                     {
-
-
 
                         ball.GetDamage();
                         FixedJobs();
 
-
-                        StartCoroutine(BulletTravel());
-
-
-
                     }
-
-
-
-
-
 
                     Invoke("SetCanFire", _firerate);
                 }
@@ -104,6 +63,8 @@ namespace Assets.Scripts.Tower
 
             do
             {
+
+
                 if (bullet != null)
                 {
                     bullet.SetActive(true);

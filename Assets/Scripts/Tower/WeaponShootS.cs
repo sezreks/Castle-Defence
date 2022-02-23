@@ -37,45 +37,10 @@ namespace Assets.Scripts.Tower
             muzzle.SetActive(true);
 
 
-
-            //if (joystick != null)
-            //{
-            //    joystick.OnMove += Joystick_OnMove;
-            //    joystick.OnMoveFinished += Joystick_OnMoveFinished;
-            //}
-
-
-
             weapon = GameObject.Find("MainTower/TowerTop/WeaponsComplete/WeaponChair/WeaponDeck");
             chair = GameObject.Find("MainTower/TowerTop/WeaponsComplete/WeaponChair");
 
         }
-
-        //private void Joystick_OnMoveFinished(object sender, EventArgs e)
-        //{
-        //    //throw new NotImplementedException();
-        //}
-
-        //private void Joystick_OnMove(object sender, Vector2 e)
-        //{
-        //    if (e.magnitude > 0)
-        //    {
-
-        //        var normal = new Vector3(e.x, e.y, 0);
-        //        if (transform.localPosition.x <= -10 && normal.y < 0)
-        //            normal = normal.WithY(0);
-
-
-
-        //        if (transform.localPosition.z <= -8 && normal.y > 0)
-        //            normal = normal.WithY(0);
-
-        //        transform.Translate(normal / 10, Space.World);
-
-        //    }
-        //}
-
-
 
         void Update()
         {
@@ -126,7 +91,6 @@ namespace Assets.Scripts.Tower
         {
             if (Physics.Raycast(shootCam.transform.position, (gameObject.transform.position - shootCam.transform.position), out hit))
             {
-
                 if (CanFire)
                 {
                     Debug.DrawLine(shootCam.transform.position, hit.point, Color.red);
@@ -142,8 +106,6 @@ namespace Assets.Scripts.Tower
                         muzflash.Play();
 
                         StartCoroutine(BulletTravel());
-
-
 
                     }
 
@@ -163,6 +125,16 @@ namespace Assets.Scripts.Tower
             var target = hit.point;
             do
             {
+
+                if (bullet != null)
+                {
+                    bullet.SetActive(true);
+                }
+                else
+                {
+                    bullet = BulletPoolManager.Instance.GetObject("Bullet");
+                }
+
                 bullet.SetActive(true);
 
                 t += Time.deltaTime * speed;
